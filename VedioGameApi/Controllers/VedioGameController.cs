@@ -20,7 +20,7 @@ namespace VedioGameApi.Controllers
             new VedioGame
             {
                 Id = 2,
-                Title = "God of War Ragnarok",
+                Title = "God of War Ragnafdg",
                 Platform = "PS5",
                 Developer = "Santa Monica Studio",
                 Publisher = "Sony Interactive Entertainment"
