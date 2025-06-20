@@ -48,6 +48,38 @@ namespace VedioGameApi.Controllers
         {
             return Ok(videoGames);
         }
+        [HttpGet("{id}")]
+       
+        public ActionResult<VedioGame> getVideoGameById(int id)
+        {
+            var game = videoGames.FirstOrDefault(x => x.Id == id);
+            if(game is null)
+                return NotFound();
+            return Ok(game);
+
+        }
+
+        [HttpPost]
+        public ActionResult<VedioGame> AddVideoGame (VedioGame newGame)
+        {
+            if (newGame is null)
+                return BadRequest();
+            newGame.Id = videoGames.Max(x => x.Id)+1;
+            videoGames.Add(newGame);
+            return CreatedAtAction(nameof(getVideoGameById),new {id = newGame.Id},newGame);
+        }
+
+        [HttpPost]
+        public  IActionResult UpdateVideoGame(int id, VedioGame updatesGame)
+        {
+            var game = videoGames.FirstOrDefault(x => x.Id == id);
+            if (game is null)
+                return NotFound();
+            return Ok(game);
+
+        }
+
+
 
     }
 }
