@@ -21,8 +21,8 @@ namespace VedioGameApi.Controllers
             {
                 Id = 2,
                 Title = "God of War Ragnafdg",
-                Platform = "PS5",
-                Developer = "Santa Monica Studio",
+                Platform = "PS10",
+                Developer = "Santa Monicafhghg Studio",
                 Publisher = "Sony Interactive Entertainment"
             },
             new VedioGame
