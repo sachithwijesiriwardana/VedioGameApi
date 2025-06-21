@@ -56,7 +56,7 @@ namespace VedioGameApi.Controllers
 
             await _context.SaveChangesAsync();
 
-            return Ok(new { message = "Updated sucessfully" });
+            return Ok(new { message = "Updated sucessfully!" });
 
 
         }
